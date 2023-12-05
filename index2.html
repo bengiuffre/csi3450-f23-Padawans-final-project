@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TEC Company Management</title>
+</head>
+<body>
+    <h1>TEC Company Management</h1>
+
+    <!-- Form to Add Company -->
+    <h2>Add a New Company</h2>
+    <form action="company_process.php" method="post">
+        Company Name: <input type="text" name="company_name">
+        <input type="submit" name="add_company" value="Add Company">
+    </form>
+
+    <!-- Form to Delete Company -->
+    <h2>Delete a Company</h2>
+    <form action="company_process.php" method="post">
+        Company ID: <input type="number" name="company_id">
+        <input type="submit" name="delete_company" value="Delete Company">
+    </form>
+
+    <!-- Display Companies -->
+    <h2>Company List</h2>
+    <?php
+    include 'company_process.php';
+    displayCompanies();
+    ?>
+</body>
+</html>
