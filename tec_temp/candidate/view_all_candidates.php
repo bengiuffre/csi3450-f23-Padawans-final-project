@@ -1,7 +1,7 @@
 <?php
 include_once 'db_connection.php';
 
-// Retrieve all candidates, their assigned course codes, and job history
+// Retrieve all candidates, their assigned course codes, and job history from each table
 $selectCandidatesQuery = "SELECT 
                             candidate.candidate_id, 
                             candidate.candidate_name, 
@@ -25,7 +25,7 @@ if (mysqli_num_rows($result) > 0) {
                 <th>Job History</th>
             </tr>";
 
-    // Output data of each row
+    // Output data for each row in a table
     while ($row = mysqli_fetch_assoc($result)) {
         echo "<tr>
                 <td>{$row['candidate_id']}</td>
