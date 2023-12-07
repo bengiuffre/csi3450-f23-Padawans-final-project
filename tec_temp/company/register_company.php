@@ -23,7 +23,7 @@
     <?php
 include_once 'db_connection.php';
 
-// Retrieve all companies from the 'company' table
+// Retrieve all companies
 $selectCompaniesQuery = "SELECT * FROM company";
 $result = mysqli_query($conn, $selectCompaniesQuery);
 
