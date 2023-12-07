@@ -8,16 +8,15 @@
 <body>
     <h2>Create Opening</h2>
     <form action="process_opening_registration.php" method="post">
-        <!-- No need for input for opening_id; it will be auto-incremented -->
+        <!-- opening id will be auto incremented in php process -->
 
         <label for="company_id">Company ID:</label>
         <input type="text" name="company_id" required>
 
         <label for="required_qualification_code">Required Qualification Code:</label>
-        <!-- Populate this dropdown with available qualifications from the database -->
+        <!-- Populate this dropdown with qualifications -->
         <select name="required_qualification_code" required>
             <?php
-                // Assuming you have a connection script (db_connection.php)
                 include_once 'db_connection.php';
 
                 $qualificationQuery = "SELECT qualification_code, qualification_description FROM qualification";
