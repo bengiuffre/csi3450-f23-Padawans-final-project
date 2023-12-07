@@ -14,7 +14,7 @@
         <label for="course_code">Select Course:</label>
         <select name="course_code" required>
         <?php
-                // List of course codes and their descriptions
+                // List of course codes and descriptions
                 $courses = array(
                     "SEC-45" => "Secretarial work; candidate must type at least 45 words per minute",
                     "SEC-60" => "Secretarial work; candidate must type at least 60 words per minute",
