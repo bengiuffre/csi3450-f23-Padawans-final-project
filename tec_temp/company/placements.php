@@ -19,7 +19,7 @@
     $placementsQuery = "SELECT * FROM placement"; 
     $placementsResult = mysqli_query($conn, $placementsQuery);
 
-    // Display Placements Table
+    // organize into a table
     echo "<table border='1'>
     <tr>
     <th>Opening ID</th>
