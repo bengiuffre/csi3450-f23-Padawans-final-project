@@ -14,12 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $row = mysqli_fetch_assoc($result);
     $nextOpeningId = $row['next_opening_id'];
 
-    //  set the next opening ID to 1
+    //  set the next opening ID to 1 if there is no openings
     if ($nextOpeningId === null) {
         $nextOpeningId = 1;
     }
 
-    // Insert opening information 
+    // Insert opening information given by user
     $insertOpeningQuery = "INSERT INTO opening (opening_id, company_id, required_qualification_code, starting_date, ending_date, hourly_pay) 
                            VALUES ('$nextOpeningId', '$company_id', '$required_qualification_code', '$starting_date', '$ending_date', '$hourly_pay')";
     
