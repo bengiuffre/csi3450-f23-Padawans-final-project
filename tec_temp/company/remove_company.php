@@ -4,7 +4,7 @@ include_once 'db_connection.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $company_id = $_POST['company_id'];
 
-    // Check if the company ID already exists
+    
     $checkCompanyQuery = "SELECT COUNT(*) AS company_count FROM company WHERE company_id = '$company_id'";
     $resultCompany = mysqli_query($conn, $checkCompanyQuery);
     $rowCompany = mysqli_fetch_assoc($resultCompany);
