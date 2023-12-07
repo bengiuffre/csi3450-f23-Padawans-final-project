@@ -4,10 +4,10 @@ $username = "root";
 $password = "";
 $dbname = "tec_temp_employment";
 
-// Create connection
+// Server connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+// If connection fails
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
