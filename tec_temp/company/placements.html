@@ -15,8 +15,8 @@
     <?php
     include_once 'db_connection.php';
 
-    // Retrieve placements information
-    $placementsQuery = "SELECT * FROM placement"; // Update the table name here
+    
+    $placementsQuery = "SELECT * FROM placement"; 
     $placementsResult = mysqli_query($conn, $placementsQuery);
 
     // Display Placements Table
@@ -37,7 +37,7 @@
 
     echo "</table>";
 
-    // Close the database connection
+    
     mysqli_close($conn);
     ?>
 </body>
