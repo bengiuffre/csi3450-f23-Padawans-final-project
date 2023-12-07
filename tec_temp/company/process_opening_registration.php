@@ -14,12 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $row = mysqli_fetch_assoc($result);
     $nextOpeningId = $row['next_opening_id'];
 
-    // If no opening exists yet, set the next opening ID to 1
+    //  set the next opening ID to 1
     if ($nextOpeningId === null) {
         $nextOpeningId = 1;
     }
 
-    // Insert opening information into the 'opening' table with the next available opening ID
+    // Insert opening information 
     $insertOpeningQuery = "INSERT INTO opening (opening_id, company_id, required_qualification_code, starting_date, ending_date, hourly_pay) 
                            VALUES ('$nextOpeningId', '$company_id', '$required_qualification_code', '$starting_date', '$ending_date', '$hourly_pay')";
     
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Error: " . $insertOpeningQuery . "<br>" . mysqli_error($conn);
     }
 
-    // Close the database connection
+   
     mysqli_close($conn);
 }
 ?>
