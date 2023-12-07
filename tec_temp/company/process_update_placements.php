@@ -2,7 +2,7 @@
 include_once 'db_connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Your logic to check qualifications and assign candidates to openings goes here
+    
 
     $updatePlacementsQuery = "
         INSERT INTO placement (opening_id, candidate_id, total_hours_worked)
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Error: " . $updatePlacementsQuery . "<br>" . mysqli_error($conn);
     }
 
-    // Close the database connection
+    
     mysqli_close($conn);
 }
 ?>
